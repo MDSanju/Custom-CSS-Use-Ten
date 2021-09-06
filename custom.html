@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CSS Property</title>
+    <style>
+        :root {
+            --my-made: orangered;
+            --second-mymade: #333;
+            --make-marpad: 0;
+            --side-width: 200px;
+        }
+
+        body {
+            margin: var(--make-marpad);
+            padding: var(--make-marpad);
+        }
+
+        header h1 .proper-color {
+            color: var(--my-made);
+        }
+
+        main h2 {
+            background-color: var(--my-made);
+            color: var(--second-mymade);
+        }
+
+
+
+
+
+
+
+        .side-nav,
+        .blogs {
+            float: left;
+            height: 500px;
+        }
+
+        aside {
+            background-color: springgreen;
+            width: var(--side-width);
+        }
+
+        .blogs {
+            background-color: lightskyblue;
+            width: calc(100% - 3*var(--side-width));
+        }
+
+        footer {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exploring Custom <span class="proper-color">CSS Properties here!</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, sit.</p>
+
+
+        <main>
+            <h2>My awesome content</h2>
+            <b>Lorem ipsum dolor sit amet consectetur adipisicing.</b>
+        </main>
+
+        <br><br><br>
+
+        <section>
+            <aside class="side-nav">
+                This is a side navigation!
+            </aside>
+
+            <div class="blogs">
+                <h4>Blogs</h4>
+            </div>
+        </section>
+
+        <br><br><br>
+
+        <footer>
+            <p>© copyright 2022</p>
+        </footer>
+    </header>
+</body>
+
+</html>
